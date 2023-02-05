@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05574C16298123F800250AF7 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05574C15298123F800250AF7 /* ColorExtention.swift */; };
+		05574C182981297E00250AF7 /* NaviBarExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05574C172981297E00250AF7 /* NaviBarExtention.swift */; };
 		056036F62969CDC50010C644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056036F52969CDC50010C644 /* AppDelegate.swift */; };
 		056036F82969CDC50010C644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056036F72969CDC50010C644 /* SceneDelegate.swift */; };
 		056036FA2969CDC50010C644 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056036F92969CDC50010C644 /* HomeViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05574C15298123F800250AF7 /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
+		05574C172981297E00250AF7 /* NaviBarExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviBarExtention.swift; sourceTree = "<group>"; };
 		056036F22969CDC50010C644 /* OP.GG Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OP.GG Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		056036F52969CDC50010C644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		056036F72969CDC50010C644 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		05E15E0B297965000075A474 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				05574C15298123F800250AF7 /* ColorExtention.swift */,
+				05574C172981297E00250AF7 /* NaviBarExtention.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -194,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05574C16298123F800250AF7 /* ColorExtention.swift in Sources */,
 				056036FA2969CDC50010C644 /* HomeViewController.swift in Sources */,
 				056036F62969CDC50010C644 /* AppDelegate.swift in Sources */,
 				056036F82969CDC50010C644 /* SceneDelegate.swift in Sources */,
+				05574C182981297E00250AF7 /* NaviBarExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
