@@ -8,10 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    static let bgColor = UIColor(named: "Background color")
     
     @IBOutlet weak var mainView: UIView!
+    
+    // MARK: sub view of main view
     @IBOutlet weak var summonerView: UIView!
     @IBOutlet weak var BMSummonerView: UIView!
     @IBOutlet weak var patchNotesView: UIView!
@@ -21,6 +21,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var weakSaleView: UIView!
     @IBOutlet weak var anotherGameView: UIView!
     @IBOutlet weak var moreInformationView: UIView!
+    
+    // MARK: sub view of summoner view
+    @IBOutlet weak var registSummonerView: UIView!
+    @IBOutlet weak var registSummonerImageView: UIImageView!
+    @IBOutlet weak var registSummonerButton: UIButton!
+    
+    // MARK: sub view of BM summoner view
+    @IBOutlet weak var BMSummonerTitleLabel: UILabel!
+    @IBOutlet weak var BMSummonerListView: UIView!
+    @IBOutlet weak var searchSummonerButton: UIButton!
+    
+    // MARK: sub view of patch notes view
+    @IBOutlet weak var patchNotesCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,16 +64,43 @@ class HomeViewController: UIViewController {
         // 1안이 딜레이에서 기본뷰가 잠깐 보이는 현상이 있을 수 있으므로 1안이 좋은 선택으로 보임
         
         self.summonerView.backgroundColor = .opggBgColor
+        // sub view 테두리 설정
+        self.registSummonerView.backgroundColor = .opggRegiSommonerColor
+        self.registSummonerView.layer.cornerRadius = 5
+        self.registSummonerView.layer.borderWidth = 0.5
+        self.registSummonerView.layer.borderColor = UIColor.darkGray.cgColor
+        // sub view 이미지 테두리 설정
+        self.registSummonerImageView.layer.cornerRadius = 5
+        // sub view 소환사 등록 버튼 설정
+        self.registSummonerButton.titleLabel?.font =
+        UIFont.systemFont(ofSize: 14)
+        self.registSummonerButton.backgroundColor = .opggBtnColor
     }
     func setBMSummonerVuew() {
         // 캐시되어있는 몇몇 소환사를 해당 뷰 위에 올림
         self.BMSummonerView.backgroundColor = .opggBgColor
+        
+        // list view 내부 구성 설계
+        // 컬렉션뷰로 구성해준다
+        // 기본 뷰는 즐겨찾기한 소환사가 없다는 구성
+        // 캐시에 즐겨찾기 정보가 있다면 컬렉션뷰 리로딩
+        
+        // sub view 소환사 검색 버튼 설정
+        // 기능은 상단 서치바 터치시 불려지는 화면과 동일할것으로 보임
+        self.searchSummonerButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        self.searchSummonerButton.backgroundColor = .opggBtnColor
+        // 버튼 폰트, 컬러 설정 일정하게 세팅하는 클래스 구현하기
         
     }
     func setPatchNotesView() {
         self.patchNotesView.backgroundColor = .opggBgColor
         // 서버에서 최근 패지에 대한 썸네일 요소정도만 가져옴
         // 컬렉션뷰로 구성(좌우 스크롤 필요)
+        // 기존 앱에서는 최신화가 앱 업데이트와 같이 진행되는 것으로 보임
+        
+        self.patchNotesCollectionView.delegate = self
+        self.patchNotesCollectionView.dataSource = self
+        
         
     }
     func setChampTierView() {
@@ -85,6 +126,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         return UITableViewCell()
+    }
+    
+    
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
     }
     
     
