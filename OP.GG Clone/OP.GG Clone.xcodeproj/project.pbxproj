@@ -15,6 +15,7 @@
 		056036FD2969CDC50010C644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056036FB2969CDC50010C644 /* Main.storyboard */; };
 		056036FF2969CDC60010C644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056036FE2969CDC60010C644 /* Assets.xcassets */; };
 		056037022969CDC60010C644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056037002969CDC60010C644 /* LaunchScreen.storyboard */; };
+		057262B329978DD4001EC3E0 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 057262B229978DD4001EC3E0 /* Tabman */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057262B329978DD4001EC3E0 /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = "OP.GG Clone";
+			packageProductDependencies = (
+				057262B229978DD4001EC3E0 /* Tabman */,
+			);
 			productName = "OP.GG Clone";
 			productReference = 056036F22969CDC50010C644 /* OP.GG Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 056036E92969CDC50010C644;
+			packageReferences = (
+				057262B129978DD4001EC3E0 /* XCRemoteSwiftPackageReference "Tabman" */,
+			);
 			productRefGroup = 056036F32969CDC50010C644 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -334,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		057262B129978DD4001EC3E0 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		057262B229978DD4001EC3E0 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 057262B129978DD4001EC3E0 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 056036EA2969CDC50010C644 /* Project object */;
 }

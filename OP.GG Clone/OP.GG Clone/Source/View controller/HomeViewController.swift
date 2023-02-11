@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         // 즐겨찾기 소환사가 있을때와 없을때로 구분 필요
         // 혹은 기본 뷰를 두고, 즐겨찾기가 있는경우 해당 뷰를 지워서 올리기
         // 1안이 딜레이에서 기본뷰가 잠깐 보이는 현상이 있을 수 있으므로 1안이 좋은 선택으로 보임
+        // 검색한 소환사명이 있을때와 없을때에 대한 반응 추가
         
         self.summonerView.backgroundColor = .opggBgColor
         // sub view 테두리 설정
@@ -105,7 +106,7 @@ class HomeViewController: UIViewController {
     }
     func setChampTierView() {
         self.champTierView.backgroundColor = .opggBgColor
-        // 페이지 처리 필요, 좌우 스크롤시 탭도 이동
+        // 페이지 처리 필요, 좌우 스크롤시 탭도 이동 -> Tabman 처리
         // 챔피언 섬네일 적인 부분은 캐시
         // 티어마크는 서버에서 불러올 필요 있음
     }

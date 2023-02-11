@@ -108,6 +108,9 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾기한 소환사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-19-nO2">
                                                         <rect key="frame" x="20" y="8" width="335" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="10c-I1-TJu"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -154,11 +157,11 @@
                                                     <constraint firstItem="2as-k5-4Ea" firstAttribute="top" secondItem="WjV-i2-knD" secondAttribute="bottom" constant="8" symbolic="YES" id="4Aw-5M-Rsd"/>
                                                     <constraint firstItem="2as-k5-4Ea" firstAttribute="centerX" secondItem="ojd-19-nO2" secondAttribute="centerX" id="9ON-GU-kWv"/>
                                                     <constraint firstItem="WjV-i2-knD" firstAttribute="centerX" secondItem="ojd-19-nO2" secondAttribute="centerX" id="AyE-4l-V7O"/>
-                                                    <constraint firstItem="ojd-19-nO2" firstAttribute="leading" secondItem="K83-bE-UZG" secondAttribute="leading" constant="20" id="EB6-kc-Sqs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ojd-19-nO2" secondAttribute="trailing" constant="20" symbolic="YES" id="O8H-QU-BAK"/>
                                                     <constraint firstAttribute="bottom" secondItem="2as-k5-4Ea" secondAttribute="bottom" constant="4" id="R7F-83-MPp"/>
                                                     <constraint firstItem="WjV-i2-knD" firstAttribute="top" secondItem="ojd-19-nO2" secondAttribute="bottom" constant="8" symbolic="YES" id="Sjp-Oe-WGW"/>
                                                     <constraint firstItem="ojd-19-nO2" firstAttribute="top" secondItem="K83-bE-UZG" secondAttribute="top" constant="8" id="Ube-al-M36"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ojd-19-nO2" secondAttribute="trailing" constant="20" id="YO4-EX-eAE"/>
+                                                    <constraint firstItem="ojd-19-nO2" firstAttribute="leading" secondItem="K83-bE-UZG" secondAttribute="leading" constant="20" symbolic="YES" id="aCd-3u-oQl"/>
                                                     <constraint firstItem="WjV-i2-knD" firstAttribute="width" secondItem="ojd-19-nO2" secondAttribute="width" id="hIq-m8-Vrk"/>
                                                     <constraint firstAttribute="height" constant="196" id="iH7-LF-HZq"/>
                                                     <constraint firstItem="2as-k5-4Ea" firstAttribute="width" secondItem="ojd-19-nO2" secondAttribute="width" id="zLF-wh-hRP"/>
@@ -211,9 +214,23 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpQ-MP-Rsz">
                                                 <rect key="frame" x="0.0" y="632" width="375" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챔피언 티어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVz-Eu-a8o">
+                                                        <rect key="frame" x="16" y="20" width="343" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="jMf-cA-BUh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="IVz-Eu-a8o" secondAttribute="trailing" constant="16" id="88N-4x-yZh"/>
+                                                    <constraint firstItem="IVz-Eu-a8o" firstAttribute="top" secondItem="UpQ-MP-Rsz" secondAttribute="top" constant="20" symbolic="YES" id="EXO-lP-2MN"/>
                                                     <constraint firstAttribute="height" constant="128" id="TYu-oP-u7V"/>
+                                                    <constraint firstItem="IVz-Eu-a8o" firstAttribute="leading" secondItem="UpQ-MP-Rsz" secondAttribute="leading" constant="16" id="vEi-EO-EV7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-jT-uP9">
