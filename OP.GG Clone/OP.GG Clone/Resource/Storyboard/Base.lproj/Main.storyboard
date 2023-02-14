@@ -213,7 +213,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpQ-MP-Rsz">
-                                                <rect key="frame" x="0.0" y="632" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="632" width="375" height="160"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챔피언 티어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVz-Eu-a8o">
                                                         <rect key="frame" x="16" y="20" width="343" height="24"/>
@@ -224,17 +224,25 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NQ-Wh-ZkZ">
+                                                        <rect key="frame" x="20" y="52" width="335" height="88"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="1NQ-Wh-ZkZ" secondAttribute="trailing" constant="20" symbolic="YES" id="0os-XK-1oh"/>
                                                     <constraint firstAttribute="trailing" secondItem="IVz-Eu-a8o" secondAttribute="trailing" constant="16" id="88N-4x-yZh"/>
                                                     <constraint firstItem="IVz-Eu-a8o" firstAttribute="top" secondItem="UpQ-MP-Rsz" secondAttribute="top" constant="20" symbolic="YES" id="EXO-lP-2MN"/>
-                                                    <constraint firstAttribute="height" constant="128" id="TYu-oP-u7V"/>
+                                                    <constraint firstAttribute="height" constant="160" id="TYu-oP-u7V"/>
+                                                    <constraint firstItem="1NQ-Wh-ZkZ" firstAttribute="top" secondItem="IVz-Eu-a8o" secondAttribute="bottom" constant="8" symbolic="YES" id="ggB-Ti-isD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1NQ-Wh-ZkZ" secondAttribute="bottom" constant="20" symbolic="YES" id="laL-dy-lsr"/>
+                                                    <constraint firstItem="1NQ-Wh-ZkZ" firstAttribute="leading" secondItem="UpQ-MP-Rsz" secondAttribute="leading" constant="20" symbolic="YES" id="vBA-77-YQz"/>
                                                     <constraint firstItem="IVz-Eu-a8o" firstAttribute="leading" secondItem="UpQ-MP-Rsz" secondAttribute="leading" constant="16" id="vEi-EO-EV7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-jT-uP9">
-                                                <rect key="frame" x="0.0" y="768" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="800" width="375" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="uJu-1e-tPe"/>
@@ -289,6 +297,7 @@
                         <outlet property="BMSummonerListView" destination="WjV-i2-knD" id="r6A-X0-u50"/>
                         <outlet property="BMSummonerTitleLabel" destination="ojd-19-nO2" id="Amb-sI-OHM"/>
                         <outlet property="BMSummonerView" destination="K83-bE-UZG" id="pbp-OC-iEo"/>
+                        <outlet property="champTierInnerView" destination="1NQ-Wh-ZkZ" id="RGI-xV-WaP"/>
                         <outlet property="champTierView" destination="UpQ-MP-Rsz" id="DRs-cS-oeP"/>
                         <outlet property="mainView" destination="epR-0i-uAo" id="Yiw-5r-UbS"/>
                         <outlet property="patchNotesCollectionView" destination="vhE-Jd-fpn" id="xfP-0K-XhS"/>

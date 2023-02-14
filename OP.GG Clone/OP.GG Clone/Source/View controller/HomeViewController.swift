@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Tabman
+import Pageboy
 
-class HomeViewController: UIViewController {
+// 기존 UIViewController 대신 TabmanViewController을 상속받음
+class HomeViewController: TabmanViewController {
     
     @IBOutlet weak var mainView: UIView!
     
-    // MARK: sub view of main view
+    // MARK: Main view
     @IBOutlet weak var summonerView: UIView!
     @IBOutlet weak var BMSummonerView: UIView!
     @IBOutlet weak var patchNotesView: UIView!
@@ -22,19 +25,27 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var anotherGameView: UIView!
     @IBOutlet weak var moreInformationView: UIView!
     
-    // MARK: sub view of summoner view
+    // MARK: Summoner view
     @IBOutlet weak var registSummonerView: UIView!
     @IBOutlet weak var registSummonerImageView: UIImageView!
     @IBOutlet weak var registSummonerButton: UIButton!
     
-    // MARK: sub view of BM summoner view
+    // MARK: BM summoner view
     @IBOutlet weak var BMSummonerTitleLabel: UILabel!
     @IBOutlet weak var BMSummonerListView: UIView!
     @IBOutlet weak var searchSummonerButton: UIButton!
     
-    // MARK: sub view of patch notes view
+    // MARK: Patch notes view
+    @IBOutlet weak var champTierInnerView: UIView!
     @IBOutlet weak var patchNotesCollectionView: UICollectionView!
     
+    // MARK: Champ tier view
+    var champTierViewControllers: Array<UIViewController> = []
+    let topChampVC = TopChampTierViewController()
+    let jugChampVC = JugChampTierViewController()
+    let midChampVC = MidChampTierViewController()
+    let adcChampVC = AdcChampTierViewController()
+    let supChampVC = SupChampTierViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +120,11 @@ class HomeViewController: UIViewController {
         // 페이지 처리 필요, 좌우 스크롤시 탭도 이동 -> Tabman 처리
         // 챔피언 섬네일 적인 부분은 캐시
         // 티어마크는 서버에서 불러올 필요 있음
+        champTierViewControllers.append(topChampVC)
+        champTierViewControllers.append(jugChampVC)
+        champTierViewControllers.append(midChampVC)
+        champTierViewControllers.append(adcChampVC)
+        champTierViewControllers.append(supChampVC)
     }
     func setBMChampView() {
         self.BMChampView.backgroundColor = .opggBgColor
@@ -117,7 +133,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-
+// MARK: - TableView Delegate
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 9
@@ -132,6 +148,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+// MARK: - CollectionView Delegate
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         <#code#>
@@ -142,4 +159,61 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     
+}
+
+// MARK: - Tabman Delegate
+extension HomeViewController: TMBarDataSource {
+    
+    func barItem(for bar: Tabman.TMBar, at index: Int) -> Tabman.TMBarItemable {
+        switch index {
+        case 0:
+            return TMBarItem(title: "탑")
+        case 1:
+            return TMBarItem(title: "정글")
+        case 2:
+            return TMBarItem(title: "미드")
+        case 3:
+            return TMBarItem(title: "바텀")
+        case 4:
+            return TMBarItem(title: "서폿")
+        default:
+            return TMBarItem(title: "Page No.\(index)")
+        }
+    }
+    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+        //위에서 선언한 vc array의 count를 반환합니다.
+        return champTierViewControllers.count
+    }
+    
+    func viewController(for pageboyViewController: PageboyViewController,
+                        at index: PageboyViewController.PageIndex) -> UIViewController? {
+        return champTierViewControllers[index]
+    }
+    
+    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+        return nil
+    }
+    
+    func settingTabBar (lineTabbar : TMBar.ButtonBar) {
+        lineTabbar.layout.transitionStyle = .snap
+        // 왼쪽 여백주기
+        lineTabbar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 13.0, bottom: 0.0, right: 20.0)
+        
+        // 간격
+        lineTabbar.layout.interButtonSpacing = 35
+        
+        lineTabbar.backgroundView.style = .blur(style: .light)
+        
+        // 선택 / 안선택 색 + font size
+        lineTabbar.buttons.customize { (button) in
+            button.tintColor = .defaultInverse
+            button.selectedTintColor = .black
+            button.font = UIFont.systemFont(ofSize: 16)
+            button.selectedFont = UIFont.systemFont(ofSize: 16, weight: .medium)
+        }
+        
+        // 인디케이터 (영상에서 주황색 아래 바 부분)
+        lineTabbar.indicator.weight = .custom(value: 2)
+        lineTabbar.indicator.tintColor = .defaultInverse
+    }
 }

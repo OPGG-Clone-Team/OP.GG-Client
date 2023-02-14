@@ -16,6 +16,11 @@
 		056036FF2969CDC60010C644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056036FE2969CDC60010C644 /* Assets.xcassets */; };
 		056037022969CDC60010C644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056037002969CDC60010C644 /* LaunchScreen.storyboard */; };
 		057262B329978DD4001EC3E0 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 057262B229978DD4001EC3E0 /* Tabman */; };
+		05D5D0CC299BC3DC009064DC /* TopChampTierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D5D0CB299BC3DC009064DC /* TopChampTierViewController.swift */; };
+		05D5D0CE299BC3F9009064DC /* JugChampTierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D5D0CD299BC3F9009064DC /* JugChampTierViewController.swift */; };
+		05D5D0D0299BC406009064DC /* MidChampTierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D5D0CF299BC406009064DC /* MidChampTierViewController.swift */; };
+		05D5D0D2299BC417009064DC /* AdcChampTierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D5D0D1299BC417009064DC /* AdcChampTierViewController.swift */; };
+		05D5D0D4299BC427009064DC /* SupChampTierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D5D0D3299BC427009064DC /* SupChampTierViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		056036FE2969CDC60010C644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		056037012969CDC60010C644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		056037032969CDC60010C644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D5D0CB299BC3DC009064DC /* TopChampTierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChampTierViewController.swift; sourceTree = "<group>"; };
+		05D5D0CD299BC3F9009064DC /* JugChampTierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JugChampTierViewController.swift; sourceTree = "<group>"; };
+		05D5D0CF299BC406009064DC /* MidChampTierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidChampTierViewController.swift; sourceTree = "<group>"; };
+		05D5D0D1299BC417009064DC /* AdcChampTierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdcChampTierViewController.swift; sourceTree = "<group>"; };
+		05D5D0D3299BC427009064DC /* SupChampTierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupChampTierViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,18 @@
 				05E15E09297964EA0075A474 /* Source */,
 			);
 			path = "OP.GG Clone";
+			sourceTree = "<group>";
+		};
+		05D5D0CA299BC394009064DC /* home View controller-champ tier tab man */ = {
+			isa = PBXGroup;
+			children = (
+				05D5D0CB299BC3DC009064DC /* TopChampTierViewController.swift */,
+				05D5D0CD299BC3F9009064DC /* JugChampTierViewController.swift */,
+				05D5D0CF299BC406009064DC /* MidChampTierViewController.swift */,
+				05D5D0D1299BC417009064DC /* AdcChampTierViewController.swift */,
+				05D5D0D3299BC427009064DC /* SupChampTierViewController.swift */,
+			);
+			path = "home View controller-champ tier tab man";
 			sourceTree = "<group>";
 		};
 		05E15E09297964EA0075A474 /* Source */ = {
@@ -108,6 +130,7 @@
 		05E15E0D297965080075A474 /* View controller */ = {
 			isa = PBXGroup;
 			children = (
+				05D5D0CA299BC394009064DC /* home View controller-champ tier tab man */,
 				056036F92969CDC50010C644 /* HomeViewController.swift */,
 			);
 			path = "View controller";
@@ -210,8 +233,13 @@
 			files = (
 				05574C16298123F800250AF7 /* ColorExtention.swift in Sources */,
 				056036FA2969CDC50010C644 /* HomeViewController.swift in Sources */,
+				05D5D0D0299BC406009064DC /* MidChampTierViewController.swift in Sources */,
+				05D5D0D2299BC417009064DC /* AdcChampTierViewController.swift in Sources */,
+				05D5D0CC299BC3DC009064DC /* TopChampTierViewController.swift in Sources */,
 				056036F62969CDC50010C644 /* AppDelegate.swift in Sources */,
+				05D5D0D4299BC427009064DC /* SupChampTierViewController.swift in Sources */,
 				056036F82969CDC50010C644 /* SceneDelegate.swift in Sources */,
+				05D5D0CE299BC3F9009064DC /* JugChampTierViewController.swift in Sources */,
 				05574C182981297E00250AF7 /* NaviBarExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
