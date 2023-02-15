@@ -64,8 +64,8 @@
                                                             <constraint firstItem="bL9-Dd-Vpe" firstAttribute="leading" secondItem="hzZ-0B-ul1" secondAttribute="leading" constant="8" id="zq9-aj-CpC"/>
                                                         </constraints>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-MB-chw">
-                                                        <rect key="frame" x="82.333333333333329" y="100" width="210.66666666666669" height="46.666666666666657"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="e4b-MB-chw">
+                                                        <rect key="frame" x="82.333333333333329" y="100" width="210.66666666666669" height="42.666666666666657"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소환사를 검색해서 등록해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0L-Cz-DvX">
                                                                 <rect key="frame" x="1.6666666666666714" y="0.0" width="207" height="19.333333333333332"/>
@@ -74,7 +74,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 전적을 분석해 도움을 줍니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZV-Cz-DKY">
-                                                                <rect key="frame" x="0.0" y="27.333333333333343" width="210.66666666666666" height="19.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="23.333333333333343" width="210.66666666666666" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEc-ZE-ubW">
-                                                        <rect key="frame" x="20" y="162.66666666666669" width="335" height="28"/>
+                                                        <rect key="frame" x="20" y="158.66666666666669" width="335" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28" id="Pu8-AR-jT5"/>
                                                         </constraints>
@@ -121,13 +121,13 @@
                                                             <constraint firstAttribute="height" constant="28" id="lQN-9i-BVS"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="소환사 검색하기"/>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjV-i2-knD">
                                                         <rect key="frame" x="20" y="40" width="335" height="116"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pGe-Ha-kkt">
-                                                                <rect key="frame" x="59.666666666666686" y="34.666666666666686" width="216" height="46.666666666666657"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pGe-Ha-kkt">
+                                                                <rect key="frame" x="59.666666666666686" y="36.666666666666686" width="216" height="42.666666666666657"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️즐겨찾기한 소환사가 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y6-gQ-7VT">
                                                                         <rect key="frame" x="0.0" y="0.0" width="216" height="19.333333333333332"/>
@@ -137,7 +137,7 @@
                                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소환사를 검색한 후 등록해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-a4-9At">
-                                                                        <rect key="frame" x="2.3333333333333286" y="27.333333333333314" width="211" height="19.333333333333329"/>
+                                                                        <rect key="frame" x="2.3333333333333286" y="23.333333333333314" width="211" height="19.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -242,10 +242,73 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-jT-uP9">
-                                                <rect key="frame" x="0.0" y="800" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="800" width="375" height="196"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾기한 챔피언" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUB-Eg-Mla">
+                                                        <rect key="frame" x="20" y="20" width="335" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="Dqf-kW-7SI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-cd-3GR">
+                                                        <rect key="frame" x="20" y="52" width="335" height="96"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wOO-ev-sKw">
+                                                                <rect key="frame" x="51.666666666666686" y="25.666666666666625" width="232" height="44.666666666666657"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️ 즐겨찾기한 챔피언이 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DY-4a-PvO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="20.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾는 챔피언을 등록해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-9h-GMy">
+                                                                        <rect key="frame" x="0.0" y="24.333333333333371" width="232" height="20.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="96" id="7R9-L8-YJs"/>
+                                                            <constraint firstItem="wOO-ev-sKw" firstAttribute="centerY" secondItem="Bba-cd-3GR" secondAttribute="centerY" id="GW3-iu-vbm"/>
+                                                            <constraint firstItem="wOO-ev-sKw" firstAttribute="centerX" secondItem="Bba-cd-3GR" secondAttribute="centerX" id="MYE-YH-5x9"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMA-3g-bZW">
+                                                        <rect key="frame" x="20" y="156" width="335" height="28"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="28" id="LxT-9y-88I"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="챔피언 살펴보기"/>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="uJu-1e-tPe"/>
+                                                    <constraint firstItem="YUB-Eg-Mla" firstAttribute="top" secondItem="DAc-jT-uP9" secondAttribute="top" constant="20" symbolic="YES" id="BMi-dp-udk"/>
+                                                    <constraint firstItem="Bba-cd-3GR" firstAttribute="leading" secondItem="DAc-jT-uP9" secondAttribute="leading" constant="20" symbolic="YES" id="KKr-TV-Zxf"/>
+                                                    <constraint firstItem="Bba-cd-3GR" firstAttribute="top" secondItem="YUB-Eg-Mla" secondAttribute="bottom" constant="8" symbolic="YES" id="Q7a-8Y-CAw"/>
+                                                    <constraint firstItem="eMA-3g-bZW" firstAttribute="top" secondItem="Bba-cd-3GR" secondAttribute="bottom" constant="8" symbolic="YES" id="VKc-Ne-q9s"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YUB-Eg-Mla" secondAttribute="trailing" constant="20" symbolic="YES" id="aTN-UH-iBu"/>
+                                                    <constraint firstItem="eMA-3g-bZW" firstAttribute="width" secondItem="YUB-Eg-Mla" secondAttribute="width" id="nb4-kx-MBO"/>
+                                                    <constraint firstItem="eMA-3g-bZW" firstAttribute="centerX" secondItem="YUB-Eg-Mla" secondAttribute="centerX" id="nhV-Io-VJL"/>
+                                                    <constraint firstItem="YUB-Eg-Mla" firstAttribute="leading" secondItem="DAc-jT-uP9" secondAttribute="leading" constant="20" symbolic="YES" id="q6c-Rp-ekv"/>
+                                                    <constraint firstAttribute="height" constant="196" id="uJu-1e-tPe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Bba-cd-3GR" secondAttribute="trailing" constant="20" symbolic="YES" id="uNL-3w-yGz"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYC-jt-aYa">
+                                                <rect key="frame" x="0.0" y="1004" width="375" height="64"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="7St-3M-afH"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -257,6 +320,7 @@
                                             <constraint firstItem="K83-bE-UZG" firstAttribute="top" secondItem="tFc-6t-RMs" secondAttribute="bottom" constant="8" symbolic="YES" id="6Up-Yh-awC"/>
                                             <constraint firstAttribute="trailing" secondItem="10b-2F-mOH" secondAttribute="trailing" id="8D8-Ov-eOu"/>
                                             <constraint firstItem="UpQ-MP-Rsz" firstAttribute="top" secondItem="10b-2F-mOH" secondAttribute="bottom" constant="8" symbolic="YES" id="CT7-zS-8EG"/>
+                                            <constraint firstItem="uYC-jt-aYa" firstAttribute="leading" secondItem="epR-0i-uAo" secondAttribute="leading" id="DCu-MV-4Ou"/>
                                             <constraint firstAttribute="trailing" secondItem="DAc-jT-uP9" secondAttribute="trailing" id="I7M-gs-XTZ"/>
                                             <constraint firstItem="tFc-6t-RMs" firstAttribute="leading" secondItem="epR-0i-uAo" secondAttribute="leading" id="K6A-rc-q1F"/>
                                             <constraint firstAttribute="trailing" secondItem="tFc-6t-RMs" secondAttribute="trailing" id="QBr-hS-YxX"/>
@@ -267,6 +331,8 @@
                                             <constraint firstItem="10b-2F-mOH" firstAttribute="leading" secondItem="epR-0i-uAo" secondAttribute="leading" id="nZ5-NA-h2Q"/>
                                             <constraint firstAttribute="trailing" secondItem="K83-bE-UZG" secondAttribute="trailing" id="s1i-Bd-gCz"/>
                                             <constraint firstItem="DAc-jT-uP9" firstAttribute="leading" secondItem="epR-0i-uAo" secondAttribute="leading" id="vr6-io-m52"/>
+                                            <constraint firstItem="uYC-jt-aYa" firstAttribute="top" secondItem="DAc-jT-uP9" secondAttribute="bottom" constant="8" symbolic="YES" id="wBy-Sp-k8h"/>
+                                            <constraint firstAttribute="trailing" secondItem="uYC-jt-aYa" secondAttribute="trailing" id="xoA-RY-v5y"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -293,6 +359,7 @@
                     <navigationItem key="navigationItem" id="qMM-RX-Fut"/>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
+                        <outlet property="BMChampInnerView" destination="Bba-cd-3GR" id="Pzj-qB-Qze"/>
                         <outlet property="BMChampView" destination="DAc-jT-uP9" id="ack-su-c9b"/>
                         <outlet property="BMSummonerListView" destination="WjV-i2-knD" id="r6A-X0-u50"/>
                         <outlet property="BMSummonerTitleLabel" destination="ojd-19-nO2" id="Amb-sI-OHM"/>
@@ -300,6 +367,7 @@
                         <outlet property="champTierInnerView" destination="1NQ-Wh-ZkZ" id="RGI-xV-WaP"/>
                         <outlet property="champTierView" destination="UpQ-MP-Rsz" id="DRs-cS-oeP"/>
                         <outlet property="mainView" destination="epR-0i-uAo" id="Yiw-5r-UbS"/>
+                        <outlet property="moveToChampViewButton" destination="eMA-3g-bZW" id="qLS-Ko-kaL"/>
                         <outlet property="patchNotesCollectionView" destination="vhE-Jd-fpn" id="xfP-0K-XhS"/>
                         <outlet property="patchNotesView" destination="10b-2F-mOH" id="z6d-4M-E9Z"/>
                         <outlet property="registSummonerButton" destination="UEc-ZE-ubW" id="Few-hm-Iyz"/>
@@ -307,6 +375,7 @@
                         <outlet property="registSummonerView" destination="hzZ-0B-ul1" id="N08-WL-yYe"/>
                         <outlet property="searchSummonerButton" destination="2as-k5-4Ea" id="15U-hy-QWQ"/>
                         <outlet property="summonerView" destination="tFc-6t-RMs" id="kGL-aK-JSF"/>
+                        <outlet property="todayTMIView" destination="uYC-jt-aYa" id="Wq5-u0-gHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

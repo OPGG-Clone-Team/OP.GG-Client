@@ -47,6 +47,10 @@ class HomeViewController: TabmanViewController {
     let adcChampVC = AdcChampTierViewController()
     let supChampVC = SupChampTierViewController()
     
+    // MARK: Bookmark champ view
+    @IBOutlet weak var BMChampInnerView: UIView!
+    @IBOutlet weak var moveToChampViewButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DUBUG: HomeVC did load")
@@ -84,6 +88,7 @@ class HomeViewController: TabmanViewController {
         // sub view 이미지 테두리 설정
         self.registSummonerImageView.layer.cornerRadius = 5
         // sub view 소환사 등록 버튼 설정
+        self.registSummonerButton.tintColor = .opggFontColor
         self.registSummonerButton.titleLabel?.font =
         UIFont.systemFont(ofSize: 14)
         self.registSummonerButton.backgroundColor = .opggBtnColor
@@ -99,6 +104,7 @@ class HomeViewController: TabmanViewController {
         
         // sub view 소환사 검색 버튼 설정
         // 기능은 상단 서치바 터치시 불려지는 화면과 동일할것으로 보임
+        self.searchSummonerButton.tintColor = .opggFontColor
         self.searchSummonerButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         self.searchSummonerButton.backgroundColor = .opggBtnColor
         // 버튼 폰트, 컬러 설정 일정하게 세팅하는 클래스 구현하기
@@ -129,6 +135,16 @@ class HomeViewController: TabmanViewController {
     func setBMChampView() {
         self.BMChampView.backgroundColor = .opggBgColor
         // 즐겨찾기시 뷰가 어떻게 처리되는지 확인 필요
+        
+        // 버튼 커스텀
+        self.moveToChampViewButton.tintColor = .opggFontColor
+        self.moveToChampViewButton.titleLabel?.font =
+        UIFont.systemFont(ofSize: 14)
+        self.moveToChampViewButton.backgroundColor = .opggBtnColor
+    }
+    func setTodayTMIView() {
+        // 스토리 적인, 혹은 스킬 상관관계에 대한 내용이 포함됨
+        // 매일 색이 바뀌며, 타이틀의 컬러도 같이 변경됨
         
     }
 }
@@ -206,14 +222,14 @@ extension HomeViewController: TMBarDataSource {
         
         // 선택 / 안선택 색 + font size
         lineTabbar.buttons.customize { (button) in
-            button.tintColor = .defaultInverse
+            button.tintColor = .opggDefaultInverseColor
             button.selectedTintColor = .black
             button.font = UIFont.systemFont(ofSize: 16)
             button.selectedFont = UIFont.systemFont(ofSize: 16, weight: .medium)
         }
         
-        // 인디케이터 (영상에서 주황색 아래 바 부분)
+        // 인디케이터 (아래 바 부분)
         lineTabbar.indicator.weight = .custom(value: 2)
-        lineTabbar.indicator.tintColor = .defaultInverse
+        lineTabbar.indicator.tintColor = .opggDefaultInverseColor
     }
 }
